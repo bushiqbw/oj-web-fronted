@@ -1,6 +1,13 @@
 <template>
   <div class="userLoginView">
-    <a-form :model="form" :style="{ width: '600px' }" @submit="handleSubmit">
+    <a-form
+      style="max-width: 480px; margin: 0 auto"
+      label-align="left"
+      auto-label-width
+      :model="form"
+      @submit="handleSubmit"
+    >
+      <h2 style="margin-bottom: 32px">用户登录</h2>
       <a-form-item field="userAccount" tooltip="请输入账号" label="账号">
         <a-input v-model="form.userAccount" placeholder="请输入账号" />
       </a-form-item>
@@ -14,7 +21,12 @@
       <!--        <a-checkbox v-model="form.isRead"> I have read the manual</a-checkbox>-->
       <!--      </a-form-item>-->
       <a-form-item>
-        <a-button html-type="submit">提交</a-button>
+        <a-button
+          type="primary"
+          html-type="submit"
+          style="width: 120px; margin: 0 auto"
+          >登录
+        </a-button>
       </a-form-item>
     </a-form>
   </div>

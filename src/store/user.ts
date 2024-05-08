@@ -17,7 +17,6 @@ export default {
   actions: {
     async getLoginUser({ commit, state }, payload) {
       const res = await UserControllerService.getLoginUser();
-      console.log(res);
       if (res.code === 0) {
         commit("updateUser", res.data);
       } else {
@@ -26,6 +25,7 @@ export default {
           useRole: AccessEnum.NOT_LOGIN,
         });
       }
+      console.log("登陆后的用户是" + res.data);
     },
   },
 

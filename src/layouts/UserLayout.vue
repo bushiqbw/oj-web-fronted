@@ -10,7 +10,11 @@
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
-      <a-layout-footer class="footer">Footer</a-layout-footer>
+      <a-layout-footer class="footer"
+        ><a href="https://github.com/bushiqbw/" target="_blank">
+          阿强哥的GitHub
+        </a></a-layout-footer
+      >
     </a-layout>
   </div>
 </template>
@@ -18,6 +22,8 @@
 <style scoped>
 #basic-layout {
   text-align: center;
+  background: url(https://gw.alipayobjects.com/zos/rmsportal/FfdJeJRQWjEeGTpqgBKj.png)
+    0% 0% / 100% 100%;
 }
 
 #basic-layout .logo {
@@ -27,7 +33,6 @@
 
 #basic-layout .header {
   margin-top: 32px;
-  margin-bottom: 16px;
 }
 
 #basic-layout .content {
@@ -36,7 +41,6 @@
 }
 
 #basic-layout .footer {
-  background: #efefef;
   padding: 16px;
   position: sticky;
   bottom: 0;
