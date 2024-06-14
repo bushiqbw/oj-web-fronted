@@ -1,4 +1,8 @@
 # oj-web-frontend
+## 根据后台生成代码
+```
+openapi --input http://localhost:8121/api/v3/api-docs --output ./generated --client axios
+```
 
 ## Project setup
 ```

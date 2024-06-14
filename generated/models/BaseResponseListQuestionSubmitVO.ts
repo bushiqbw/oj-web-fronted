@@ -2,9 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-export type BaseResponseBoolean = {
+import type { QuestionSubmitVO } from './QuestionSubmitVO';
+export type BaseResponseListQuestionSubmitVO = {
     code?: number;
-    data?: boolean;
+    data?: Array<QuestionSubmitVO>;
     message?: string;
 };
 

@@ -15,11 +15,7 @@ router.beforeEach(async (to, from, next) => {
   const needAccess = (to.meta?.access as string) ?? AccessEnum.NOT_LOGIN;
   //如果要跳转的页面必须要权限
   if (needAccess !== AccessEnum.NOT_LOGIN) {
-    if (
-      !loginUser ||
-      !loginUser.userRole ||
-      loginUser.userRole === AccessEnum.NOT_LOGIN
-    ) {
+    if (!loginUser || !loginUser.userRole) {
       next(`/user/login?redirectTo=${to.fullPath}`);
       return;
     }

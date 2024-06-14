@@ -2,10 +2,10 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { User } from './User';
-export type BaseResponseUser = {
+import type { QuestionCommentVO } from './QuestionCommentVO';
+export type BaseResponseListQuestionCommentVO = {
     code?: number;
-    data?: User;
+    data?: Array<QuestionCommentVO>;
     message?: string;
 };
 

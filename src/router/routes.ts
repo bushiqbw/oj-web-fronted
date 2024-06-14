@@ -10,6 +10,8 @@ import AddQuestionView from "@/views/question/AddQuestionView.vue";
 import ManageQuestionView from "@/views/question/ManageQuestionView.vue";
 import QuestionsView from "@/views/question/QuestionsView.vue";
 import ViewQuestionView from "@/views/question/ViewQuestionView.vue";
+import QuestionSubmitView from "@/views/question/QuestionSubmitView.vue";
+import UserManageView from "@/views/user/UserManageView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +38,11 @@ export const routes: Array<RouteRecordRaw> = [
     path: "/questions",
     name: "浏览题目",
     component: QuestionsView,
+  },
+  {
+    path: "/question_submit",
+    name: "浏览题目提交",
+    component: QuestionSubmitView,
   },
   {
     path: "/view/question/:id",
@@ -91,6 +98,14 @@ export const routes: Array<RouteRecordRaw> = [
     component: NoAuthView,
     meta: {
       hideInMenu: true,
+    },
+  },
+  {
+    path: "/manage/user",
+    name: "用户管理",
+    component: UserManageView,
+    meta: {
+      access: ACCESS_ENUM.ADMIN,
     },
   },
   // {

@@ -29,6 +29,11 @@
         </a-button>
       </a-form-item>
     </a-form>
+    <a-layout-footer class="footer"
+      ><a href="http://localhost:8080/user/Register" target="_blank">
+        没有账号？那注册一个
+      </a></a-layout-footer
+    >
   </div>
 </template>
 
@@ -57,7 +62,7 @@ const handleSubmit = async () => {
   if (res?.code === 0) {
     const user_login = await store.dispatch("user/getLoginUser");
     router.push({
-      path: "/",
+      path: "/questions",
       replace: true,
     });
     console.log(user_login);
